@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Midterm Exam</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./fonts/roboto/roboto.css">
+        <link rel="stylesheet" href="./fonts/bootstrap-icons-1.10.2/bootstrap-icons.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+<body class="py-5">
+    <div class="container-fluid mb-5 px-4">
+        <h1 class="text-center mt-4">Web 1 Midterm Exam</h1>
+        <!-- Part 1 -->
+        <div class="row mt-5">
+            <div class="col-12 col-lg-5">
+                <form id="reg-user-form">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Part 1: Register New User</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="pills-bar d-flex">
+                                <ul class="nav nav-pills mb-3 ms-auto" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="tab-part-1-form" data-bs-toggle="pill" data-bs-target="#tab-part-1" type="button" role="tab" aria-controls="tab-part-1" aria-selected="true">Form</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="tab-part-1-html-code" data-bs-toggle="pill" data-bs-target="#tab-part-1-html" type="button" role="tab" aria-controls="tab-part-1-html" aria-selected="false">HTML Code <i class="bi bi-code"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="tab-part-1" role="tabpanel" aria-labelledby="tab-part-1-form" tabindex="0">
+                                    <div class="form-field my-3">
+                                        <label for="user-phone" class="form-label">Phone</label>
+                                        <input type="text" class="form-control" id="user-phone">
+                                        <span class="error-msg"></span>
+                                    </div>
+                                    <div class="form-field mb-3">
+                                        <label for="user-pass" class="form-label">Password</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="user-pass">
+                                            <button class="btn btn-secondary" type="button" id="gen-pass">Generate</button>
+                                        </div>
+                                        <span class="error-msg"></span>
+                                    </div>
+                                    <div class="form-field mb-3">
+                                        <label for="user-dob" class="form-label">Date of birth</label>
+                                        <input type="date" class="form-control" id="user-dob" value="2000-01-01">
+                                        <span class="error-msg"></span>
+                                    </div>
+                                    <div class="w-100 text-center">
+                                        <button type="button" id="register-user" class="btn btn-primary">Register</button>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab-part-1-html" role="tabpanel" aria-labelledby="tab-part-1-html-code" tabindex="0">
+<pre>
+    &lt;!-- Phone field --&gt;
+    &lt;div class="form-field my-3"&gt;
+        &lt;label for="user-phone" class="form-label"&gt;Phone&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="user-phone"&gt;
+        &lt;span class="error-msg">&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;!-- Password field --&gt;
+    &lt;div class="form-field mb-3"&gt;
+        &lt;label for="user-pass" class="form-label"&gt;Password&lt;/label&gt;
+        &lt;div class="input-group mb-3&gt;
+            &lt;input id="user-pass" type="text" class="form-control" &gt;
+            &lt;button id="gen-pass" class="btn btn-secondary" type="button" &gt;Generate&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;span class="error-msg"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;!-- Date of Birth field--&gt;
+    &lt;div class="form-field mb-3"&gt;
+        &lt;label for="user-dob" class="form-label">Date of birth&lt;/label&gt;
+        &lt;input type="date" class="form-control" id="user-dob" value="2000-01-01"&gt;
+        &lt;span class="error-msg">&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;!-- Registration Button --&gt;
+    &lt;div class="w-100 text-center"&gt;
+        &lt;button type="button" id="register-user" class="btn btn-primary"&gt;Register&lt;/button&gt;
+    &lt;/div&gt;
+</pre>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-7">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Part 1 Requirements:</h3>
+                        <ul class="pb-4 border-bottom">
+                            <li>You must validate the input fields according to the rules described below and implement the required functionality (if any)</li>
+                            <li>All validation error messages must be displayed in the <b>"error-msg"</b> class with respect to its related field (span already written in the code. Click on HTML Code tab to view it.)</li>
+                            <li>Validation error messages are displayed when the input value doesn't match the required conditions.</li>
+                        </ul>
+                        <h5 >Phone</h5>
+                        <ul class="pb-4 border-bottom">
+                            <li><b>Validation Rules:</b>This field must accept mobile phone numbers only starting with 059 or 056 and 10 numbers in total.</li>
+                            <li><b>Validation Error Message:</b><span class="text-danger">"Invalid phone number"</span></li>
+                        </ul>
+                        <h5>Password</h5>
+                        <ul class="pb-4 border-bottom">
+                            <li><b>Function:</b><br>
+                                When clicking on the "Generate" button, a random password must be filled in the input. <br>
+                                Generated passwords must have capital letters AND small letters AND numbers AND underscores ` _ `. <br>
+                                Generated password length must be 14 digits.
+                            </li>
+                            <li><b>Validation Rules:</b>Value must have: capital letters AND small letters AND numbers AND underscore `_ ` and length between 8 and 16 digits.</li>
+                            <li><b>Validation Error Message:</b><br>
+                                If the pattern is incorrect: <span class="text-danger">"Password must contain capital letters, small letters, numbers, and underscore ` _ ` and length between 8 and 16 digits."</span><br>
+                            </li>
+                        </ul>
+                        <h5>Date of Birth:</h5>
+                        <ul class="pb-4 border-bottom">
+                            <li><b>Validation Rules:</b>User who is less than 18 years old CANNOT register.</li>
+                            <li><b>Validation Error Message:</b><span class="text-danger">"You must be 18 years old or older to sign-up."</span></li>
+                        </ul>
+                        <h5>Form</h5>
+                        <ul class="">
+                            <li>When the user changes a field value, the corresponding error message must be deleted.</li>
+                            <li>If the form is valid, show an alert with the message <span class="text-success">"Successful"</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- # // end of part 1 # -->
+        <hr>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Part 2: Find the Student! Requirements</h3><br>
+                        The objective is to type the student name (or part of it) in the search box and show the full student
+                        name and section in the table below the search box <b>sorted by section time.</b>
+                        The data provided is an array of objects under the variable name 'students'. Each object has the
+                        student name in Arabic and the section time, for example:
+                        <a href="./data.js" target="_blank">Click here to see the data</a>
+                        <pre>
+[
+    {
+        "name": "سامر حواري",
+        "section": 9
+    },
+    {
+        "name": "عبدالرزاق نتشة",
+        "section": 10
+    },
+        .
+        .
+        .
+        .
+]    
+                        </pre>
+                        If you type سا in the search box for example, the table will display ALL student names that have the
+                        keyword سا in it with section they belong to.
+                        If no results were found, the table must show <b>"No students were found".</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <form id="reg-user-form">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Part 2: Find the Student!</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="pills-bar d-flex">
+                                <ul class="nav nav-pills mb-3 ms-auto" id="pills-tab-part-2" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="tab-part-2-table" data-bs-toggle="pill" data-bs-target="#tab-part-2" type="button" role="tab" aria-controls="tab-part-2" aria-selected="true">Table</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="tab-part-2-html-code" data-bs-toggle="pill" data-bs-target="#tab-part-2-html" type="button" role="tab" aria-controls="tab-part-2-html" aria-selected="false">HTML Code <i class="bi bi-code"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="tab-part-2" role="tabpanel" aria-labelledby="tab-part-2-table" tabindex="0">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Student Name" id="search-name">
+                                        <button class="btn btn-secondary" type="button" id="search-btn">
+                                            <i class="bi bi-search"></i>
+                                        </button>
+                                    </div>
+                                    <table id="students-table" class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Section</th>
+                                                <th>Student Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="2">No students were found</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade" id="tab-part-2-html" role="tabpanel" aria-labelledby="tab-part-2-html-code" tabindex="0">
+<pre>
+    &lt;!-- Search field --&gt;
+    &lt;div class="input-group mb-3"&gt;
+        &lt;input type="text" class="form-control" placeholder="Student Name" id="search-name"&gt;
+        &lt;button class="btn btn-secondary" type="button" id="search-btn"&gt;
+            &lt;i class="bi bi-search"&gt;&lt;/i&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;!-- Table field --&gt;
+    &lt;table id="students-table" class="table table-bordered"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Section&lt;/th&gt;
+                &lt;th&gt;Student Name&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td colspan="2"&gt;No students were found&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+</pre>                                    
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </form>
+            </div>
+           
+        </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./data.js"></script>
+    <script src="./part1.js"></script>
+    <script src="./part2.js"></script>
+    <script>
+        /**  Write your JS code in the file named 'part1.js' for part 1 and 'part2.js' for part 2. These are the ONLY two files you will be submitting. **/ 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem !important;
+}
+
+b,label{
+    font-weight: 500 !important;
+}
+
+#reg-user-form .error-msg {
+    color: #b83535;
+    margin-top: 0.5rem
+}
