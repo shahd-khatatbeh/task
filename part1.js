@@ -80,7 +80,7 @@ password.addEventListener("keyup", function(){
 
 //generate random password
 function generateRandomPassword(){
-    const length = Math.floor(Math.random() * 9) + 8;
+    const length = 14;
     const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_";
     let password = "";
     for(let i=0;i<length;i++){
