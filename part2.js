@@ -10,6 +10,7 @@ function searchName(){
     for(let i=0;i<students.length;i++){
         if(students[i].name.includes(search_name.value)){
             flag=1
+            students.sort((a,b) => a.section-b.section)
             result+=`
             <tr>
             <td>${students[i].section}</td>
